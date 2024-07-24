@@ -52,7 +52,6 @@ header,
 }
 
 /* footer */
-
 footer {
   display: grid;
   place-items: center;
@@ -67,8 +66,6 @@ main {
 
 .main-container {
   min-height: 600px;
-  /* width: 200px; */
-  /* background-color: red; */
 }
 
 .home {
@@ -84,6 +81,7 @@ main {
   gap: 20px;
   color: white;
 }
+
 .name {
   color: seagreen;
   font-size: 1.5rem;
@@ -108,7 +106,8 @@ main {
 }
 
 .about,
-.services {
+.services,
+.experience {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -119,12 +118,14 @@ main {
 .heading-text {
   font-weight: bold;
   font-size: x-large;
+  letter-spacing: 5px;
 }
 
 .underline-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
 }
 
 .underline {
@@ -174,7 +175,7 @@ main {
   color: #fff;
 }
 
-.services-card-wrapper {
+.card-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -193,12 +194,34 @@ main {
   background-color: rgb(181, 181, 181);
 }
 
+/* Experience */
+
+.experience img {
+  width: 100%;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 0;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.badge {
+  background-color: #31c39e;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: small;
+  color: #fff;
+}
+
 .main-container:nth-of-type(3) {
   background-color: #31c39e;
 }
-.main-container:nth-of-type(4) {
-  background-color: rgb(201, 204, 204);
-}
+
 .main-container:nth-of-type(5) {
   background-color: brown;
 }
