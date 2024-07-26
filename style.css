@@ -1,15 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto;
 }
 html {
   scroll-behavior: smooth;
 }
 
 h4,
+a,
 .heading-text {
   text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* nav */
@@ -171,10 +179,6 @@ main {
 
 /* Services starts here */
 
-.services {
-  color: #fff;
-}
-
 .card-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -218,13 +222,55 @@ main {
   color: #fff;
 }
 
-.main-container:nth-of-type(3) {
-  background-color: #31c39e;
+/* works */
+.works {
+  min-height: fit-content !important;
+  padding: 70px 2.5%;
+  text-align: center;
+  color: #fff;
+  background-color: #0b8ea0;
 }
 
-.main-container:nth-of-type(5) {
-  background-color: brown;
+.works-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
-.main-container:nth-of-type(6) {
-  background-color: yellow;
+
+.works-description {
+  max-width: 500px;
+}
+
+.works-navigation-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.works-navigation {
+  padding: 10px;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+.works-navigation:hover {
+  scale: 0.95;
+  border-radius: 0.25rem;
+}
+
+.works-navigation:first-of-type,
+.works-navigation:last-of-type:hover {
+  background-color: #fff;
+  color: #0b8ea0;
+}
+
+.works-navigation:last-of-type,
+.works-navigation:first-of-type:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.main-container:nth-of-type(3) {
+  background-color: #31c39e;
+  color: #fff;
 }
