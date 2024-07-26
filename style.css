@@ -33,6 +33,8 @@ h6 {
 /* nav */
 
 nav {
+  display: grid;
+  place-items: center;
   padding: 15px;
   position: fixed;
   width: 100%;
@@ -44,29 +46,31 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
   gap: 15px;
 }
 
 .balance-logo-container {
   display: grid;
   place-items: center;
-  flex: 1;
 }
 
 .balance-logo {
   border-radius: 50px;
-  border: 2px solid #31c39e;
-  padding: 4px;
+  border: 2px solid #158695;
+  padding: 3px;
 }
 
 .navigation-links-container {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   overflow-x: auto;
 }
 
 .navigation {
   margin-left: 0 !important;
+  border-radius: 3px;
 }
 
 .navigation,
@@ -74,11 +78,14 @@ header {
   color: rgb(132, 132, 132);
   text-decoration: none;
   margin-left: 5px;
-  transition: all 0.5s;
+  padding: 5px;
+  transition: all 0.65s;
 }
 .navigation:hover {
   color: black;
   font-weight: bold;
+  background-color: #158695;
+  color: #fff;
 }
 
 .socials:hover {
@@ -105,10 +112,14 @@ main {
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.399), rgba(0, 0, 0, 0.497)),
     url("./assets/images/hero-image.png") no-repeat center;
-  padding: 1rem;
+  padding: 10%;
   display: flex;
   align-items: center;
-  min-height: 95vh;
+  min-height: 100vh;
+}
+
+.home-title {
+  font-size: 12px;
 }
 
 .main-one-wrapper {
@@ -119,13 +130,13 @@ main {
 
 .name {
   color: #31c39e;
-  font-size: 1.85rem;
+  font-size: 2.2rem;
 }
 
 .hero-text-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 .description {
@@ -136,8 +147,18 @@ main {
   display: inline-block;
   color: white;
   text-decoration: none;
-  border: 1px solid white;
+  background-color: #b0b0b0;
   padding: 10px;
+  border-radius: 2px;
+  transition: all 0.5s;
+}
+
+.hero-button:last-of-type {
+  background-color: #158695;
+}
+
+.hero-button:hover {
+  opacity: 0.65;
 }
 
 .about,
@@ -147,13 +168,14 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding: 40px 10px;
+  padding: 150px 25px;
 }
 
 .heading-text {
   font-weight: bold;
   font-size: x-large;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
+  font-family: Open Sans;
 }
 
 .underline-wrapper {
@@ -173,8 +195,15 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 40px;
   width: 100%;
+}
+
+.about-skill-level {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .card {
