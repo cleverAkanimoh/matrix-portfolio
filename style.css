@@ -10,24 +10,25 @@ html {
   scroll-behavior: smooth;
 }
 
-h4,
-a,
-.heading-text {
-  text-transform: capitalize;
+p {
+  font-size: 15px;
 }
 
 a {
   text-decoration: none;
   font-size: 13px;
+  text-transform: capitalize;
 }
 
 h1,
+.heading-text,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: Playfair Display;
+  text-transform: capitalize;
 }
 
 /* nav */
@@ -47,7 +48,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1150px;
   gap: 15px;
 }
 
@@ -163,7 +164,8 @@ main {
 
 .about,
 .services,
-.experience {
+.experience,
+.blog {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,7 +188,7 @@ main {
 }
 
 .underline {
-  width: 50px;
+  width: 60px;
   height: 4px;
   background-color: black;
   border-radius: 99px;
@@ -206,28 +208,34 @@ main {
   font-weight: bold;
 }
 
+.experience-card {
+  background-color: #eaeaea;
+}
+
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
 }
 .download {
   width: fit-content;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border: 0;
-  background-color: seagreen;
+  background-color: #158695;
   color: white;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 2px;
   transition: all 0.5s;
 }
 
 .download:hover {
   opacity: 0.5;
-  background-color: red;
+  background-color: seagreen;
 }
 .about-image {
   max-width: 350px;
+  height: 100%;
 }
 .moses-card-wrapper > div {
   max-width: 350px;
@@ -237,8 +245,8 @@ main {
 
 .card-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
 }
 
 .card-icon-wrapper {
@@ -251,7 +259,7 @@ main {
 }
 
 .services-underline {
-  background-color: rgb(181, 181, 181);
+  background-color: #f1f1f1;
 }
 
 /* Experience */
@@ -263,18 +271,23 @@ main {
 .card-title {
   display: flex;
   justify-content: space-between;
-  padding: 10px 10px 10px 0;
+  padding: 10px;
 }
 
 .title {
   font-weight: bold;
+  font-size: 20px;
+}
+
+.experience-description {
+  padding: 10px;
 }
 
 .badge {
   background-color: #31c39e;
   border-radius: 5px;
-  padding: 3px 5px;
-  font-size: small;
+  padding: 5px 20px;
+  font-size: x-small;
   color: #fff;
 }
 
@@ -290,7 +303,7 @@ main {
 .works-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
 }
 
@@ -301,12 +314,12 @@ main {
 .works-navigation-wrapper {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 3px;
 }
 
 .works-navigation {
-  padding: 10px;
-  font-size: 14px;
+  padding: 10px 25px;
+  font-size: 12px;
   transition: all 0.5s;
 }
 .works-navigation:hover {
@@ -314,19 +327,63 @@ main {
   border-radius: 0.25rem;
 }
 
-.works-navigation:first-of-type,
-.works-navigation:last-of-type:hover {
+.works-navigation:first-of-type {
   background-color: #fff;
   color: #0b8ea0;
 }
 
-.works-navigation:last-of-type,
-.works-navigation:first-of-type:hover {
+.works-navigation:last-of-type {
   background-color: #000;
+  color: #fff;
+}
+
+.works-navigation:hover {
+  background-color: #31c39e;
   color: #fff;
 }
 
 .main-container:nth-of-type(3) {
   background-color: #31c39e;
   color: #fff;
+}
+
+.blog {
+  background: linear-gradient(rgba(0, 0, 0, 0.399), rgba(0, 0, 0, 0.497)),
+    url(./assets/images/blog-bg.jpg) no-repeat center/cover border-box;
+  color: #fff;
+}
+
+.blog .underline {
+  background-color: #fff;
+}
+
+.blog-heading {
+  width: 100%;
+  max-width: 1050px;
+}
+.blog-heading p {
+  color: #b0b0b0;
+}
+
+.blog-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 2px;
+  padding: 10px 0;
+}
+
+.blog-card p {
+  padding: 5px 10px;
+}
+
+.blog-card a {
+  color: #31c39e;
+  display: block;
+  margin: 10px;
+  transition: all 0.5s;
+  width: fit-content;
+}
+.blog-card a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
 }
