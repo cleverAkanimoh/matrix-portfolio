@@ -96,10 +96,14 @@ header {
 /* footer */
 footer {
   display: grid;
-  place-items: center;
+  place-items: center end;
   background-color: black;
   min-height: 60px;
-  padding: 10px;
+  padding: 20px;
+}
+
+footer a {
+  font-size: 16px;
 }
 /* main contents */
 main {
@@ -380,7 +384,7 @@ main {
 }
 
 .blog-card a {
-  color: #31c39e;
+  color: #158695;
   display: block;
   margin: 10px;
   transition: all 0.5s;
@@ -396,4 +400,110 @@ main {
   width: 100%;
   height: 100%;
   cursor: pointer;
+}
+
+/* Contact */
+
+.contact-card-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 380px;
+}
+
+.card-icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.card-icon-wrapper i,
+.input-container i {
+  color: #158695;
+}
+
+.card-icon-container .card-icon-wrapper:last-of-type h4 {
+  text-transform: lowercase;
+}
+
+.map {
+  height: 200px;
+  background-color: #158695;
+  border-radius: 5px;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 3px;
+  flex: 0.3;
+}
+
+.input-container input,
+textarea {
+  padding: 9px 15px;
+  flex: 1;
+  border: 1px solid #e5e5e5;
+  outline: 0;
+  border-radius: 3px;
+}
+
+.input-container textarea {
+  height: 80px;
+  resize: none;
+}
+
+.input-container input::placeholder,
+textarea::placeholder {
+  font-size: 10px;
+  color: #b0b0b0;
+}
+
+.submit-btn {
+  overflow: hidden;
+  display: flex;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #158695;
+  color: white;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 3px;
+  float: right;
+}
+
+.submit-btn:hover {
+  background-color: #31c39e;
+}
+
+.submit-btn:hover .send-icon {
+  translate: 0;
+  opacity: 1;
+}
+
+.send-icon {
+  transition: all 0.5s;
+  opacity: 0;
+  translate: 0 100%;
 }
